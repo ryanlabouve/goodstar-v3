@@ -36,7 +36,7 @@ export default function Index() {
       {/* Hero */}
       <div
         style={{
-          backgroundImage: "url(/images/hero4.jpg)",
+          backgroundImage: "url(/images/hero5.jpg)",
         }}
         className="bg-gray-300 py-20 bg-cover"
       >
@@ -64,10 +64,13 @@ export default function Index() {
         </div>
       </div>
       <div id="about-us" className="bg-gray-50 py-8">
-        <div className="flex  max-w-7xl m-auto px-4">About Us</div>
-        <div>
-          Focused on commercial. About our team forming in Norman. Philthropy
-          stuffs
+        <div className="flex  max-w-7xl m-auto px-4">
+          <div className="text-2xl">About Us</div>
+
+          <div>
+            Focused on commercial. About our team forming in Norman. Philthropy
+            stuffs
+          </div>
         </div>
       </div>
       <div id="our-services">
@@ -85,6 +88,9 @@ export default function Index() {
           </div>
         </div>
         <div className="bg-blue-300">
+          <div className="flex  max-w-7xl m-auto px-4">Concrete Removal</div>
+        </div>
+        <div className="bg-red-300">
           <div className="flex  max-w-7xl m-auto px-4">Disaster Recovery</div>
         </div>
       </div>
