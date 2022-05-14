@@ -1,3 +1,47 @@
+interface Service {
+  heading: string;
+  description: string;
+  background: string;
+  images: string[];
+}
+
+const services: Service[] = [
+  {
+    heading: "Selective Demolition",
+    description:
+      "Removing features of an existing space or strucutre. Examples: when one commercial space moves out and a new tennent requires something different ",
+    background: "/images/selective-demolition-1.jpg",
+    images: [],
+  },
+  {
+    heading: "Deconstruction",
+    description: "Breaking down a strucutre to salvage the underlying material",
+    background: "/images/deconstruction-bg-1.jpg",
+    images: [],
+  },
+  {
+    heading: "Structural Demolition",
+    description:
+      "Removal of whole structures. Examples: removing an existing home to rebuild, removing commercial strucutres to rebuild",
+    background: "/images/total-demolition-bg-4.jpg",
+    images: [],
+  },
+  {
+    heading: "Concrete Removal",
+    description:
+      "From removing large runs of parking lot to creating new runs in foundations for plumbing",
+    background: "/images/concrete-removal-bg-1.jpg",
+    images: [],
+  },
+
+  {
+    heading: "Disaster Recovery",
+    description:
+      "When storms come'a'knocking we go a rocking. Goodstar parterns with various diaster relief organizations to volunteer.",
+    background: "/images/disaster-recovery-bg-1.jpg",
+    images: [],
+  },
+];
 export default function Index() {
   return (
     <div>
@@ -74,25 +118,25 @@ export default function Index() {
         </div>
       </div>
       <div id="our-services">
-        <div className="bg-red-300">
-          <div className="flex  max-w-7xl m-auto px-4">
-            Selective Demolition
+        {services.map(({ heading, description, background, images }) => (
+          <div
+            style={{
+              backgroundImage: `url(${background})`,
+            }}
+            className="bg-gray-300 py-20 bg-cover text-white"
+            key={heading}
+          >
+            <div className="flex  max-w-7xl m-auto px-4 py-8">
+              <div className="grid grid-cols-2 w-full gap-12">
+                <div>
+                  <div className="text-2xl">{heading}</div>
+                  <div>{description}</div>
+                </div>
+                <div>images</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="bg-blue-300">
-          <div className="flex  max-w-7xl m-auto px-4">Deconstruction</div>
-        </div>
-        <div className="bg-red-300">
-          <div className="flex  max-w-7xl m-auto px-4">
-            Structural Demolition
-          </div>
-        </div>
-        <div className="bg-blue-300">
-          <div className="flex  max-w-7xl m-auto px-4">Concrete Removal</div>
-        </div>
-        <div className="bg-red-300">
-          <div className="flex  max-w-7xl m-auto px-4">Disaster Recovery</div>
-        </div>
+        ))}
       </div>
       <div id="working-with-us">
         <div className="flex  max-w-7xl m-auto px-4">Working with us</div>
