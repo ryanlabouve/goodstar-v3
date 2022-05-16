@@ -110,7 +110,7 @@ export default function Index() {
   let h = windowSize.width > 800 ? 400 : 200;
 
   return (
-    <div style={{ minWidth: "540px;" }}>
+    <div style={{ minWidth: "540px" }}>
       {/*Header*/}
       <div className="bg-slate-800 text-gray-50 py-6 px-4 shadow border-b border-b-slate-900">
         <div className="flex  max-w-7xl m-auto">
