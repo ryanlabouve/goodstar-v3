@@ -143,7 +143,7 @@ export default function Index() {
               </a>
             </div>
             <div className="mr-4">
-              <a href="https://twitter.com/goodstardemo">
+              <a href="https://instagram.com/goodstardemolition">
                 <img
                   style={{ filter: "invert(1)" }}
                   src="/images/instagram.svg"
